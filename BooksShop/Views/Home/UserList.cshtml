@@ -1,0 +1,50 @@
+﻿@model List<Users>
+@using BooksShop.Models
+
+@{
+    ViewBag.Title = "用户列表";
+    Layout = "~/Views/Home/ManageMaster.cshtml";
+    <link href="~/CSS/UserList.css" rel="stylesheet" />
+    <script src="~/JS/UserList.js"></script>
+}
+
+<div class="main">
+    <div class="top">您现在的位置：<a href="#"> 第三波</a> ><a href="#"> 管理员后台 </a>><a href="#"> 用户管理</a> > 用户列表 </div>
+    <div class="page">
+        第<span id="index"> @ViewBag.index</span> 页，共<span id="tolPage"> @ViewBag.TolPage</span> 页（共计 @ViewBag.TolRecord 笔）
+    </div>
+    <div class="mytb">
+        <table cellpadding="0" cellspacing="0" style="width:100%;">
+            <tr>
+                <th style="width:40px;">序号</th>
+                <th style="width:120px;">用户名</th>
+                <th style="width:120px;">姓名</th>
+                <th style="width:120px;">电话</th>
+                <th style="width:200px;">电子邮件</th>
+                <th style="width:200px;">地址</th>
+                <th style="width:120px;">操作</th>
+            </tr>
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td style="width:40px;">@(i + 1)</td>
+                    <td class="LoginId" style="width:120px;">@Model[i].LoginId</td>
+                    <td style="width:120px;">@Model[i].Name</td>
+                    <th style="width:120px;">@Model[i].Phone</th>
+                    <td style="width:200px;">@Model[i].Mail</td>
+                    <td style="width:200px;">@Model[i].Address</td>
+                    <td class="state">
+                        @Html.ActionLink("删除", "DeleteUser", "User", new { Id = Model[i].Id }, new { onclick = "return btn_delete();" })
+                        @Html.ActionLink("详情", "UserDetailis", new { Id = Model[i].Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="footer">
+        <input type="button" value="首页" onclick="FirstPage();" />
+        <input type="button" value="上一页" onclick="PageUp();" />
+        <input type="button" value="下一页" onclick="PageDown();" />
+        <input type="button" value="尾页" onclick="LastPage();" />
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/CSS/UserLogin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login">
+        <div class="login_t">
+        </div>
+        <div class="login_m">
+        </div>
+        <div class="login_b">
+                @using (Html.BeginForm("Login","User")) { 
+                <table align="center">
+                    <tr>
+                        <td>
+                            用户名:
+                        </td>
+                        <td>
+                            @Html.TextBox("txtUserName")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            密&nbsp;&nbsp;码:
+                        </td>
+                        <td>
+                            @Html.Password("txtUserPwd")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="提交" class="login_sub" />
+                            <input type="reset" value="重置" class="login_sub" />
+                        </td>
+                    </tr>
+                </table>
+                }
+        </div>
+    </div>
+</body>
+</html>

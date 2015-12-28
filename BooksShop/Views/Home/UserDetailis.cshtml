@@ -1,0 +1,40 @@
+﻿@model BooksShop.Models.Users
+
+@{
+    ViewBag.Title = "修改用户资料";
+    Layout = "~/Views/Home/ManageMaster.cshtml";
+    <link href="~/CSS/UserDetailis.css" rel="stylesheet" />
+}
+
+<div class="main">
+    <div class="top">您现在的位置：<a href="#"> 第三波</a> ><a href="#"> 管理员后台 </a>><a href="#"> 用户管理</a> > 修改用户资料 </div>
+    @using (Html.BeginForm("SaveUser", "User"))
+    {
+        @Html.HiddenFor(x => x.Id);
+        <table id="mytb" cellpadding="0" cellspacing="0" style="width:100%;">
+            <tr>
+                <td class="td1">用户名：</td>
+                <td>@Model.LoginId</td>
+            </tr>
+            <tr>
+                <td class="td1">姓名：</td>
+                <td>@Html.TextBoxFor(x => x.Name)</td>
+            </tr>
+            <tr>
+                <td class="td1">电话：</td>
+                <td>@Html.TextBoxFor(x => x.Phone)</td>
+            </tr>
+            <tr>
+                <td class="td1">地址：</td>
+                <td>@Html.TextBoxFor(x => x.Address)</td>
+            </tr>
+            <tr>
+                <td class="td1">E-Mail：</td>
+                <td>@Html.TextBoxFor(x => x.Mail)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="保存"></td>
+            </tr>
+        </table>
+    }
+</div>

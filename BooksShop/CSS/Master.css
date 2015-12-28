@@ -1,0 +1,68 @@
+﻿body,ul,li,table,tr,td,img,div,dl,dt,dd {
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+body {
+   background-color:#EAEFF1;
+   font-size:12px;
+}
+.MainTop {
+    width:100%;
+    height:92px;
+    background-image:url(../Images/Home/admin_top.gif);
+}
+.MainLeft {
+    width:195px;
+    height:310px;
+    float:left;
+    /*margin-top:20px;
+    margin-left:10px;*/
+}
+.treeTop {
+    width:195px;
+    height:50px;
+    font-size:14px;
+    line-height:50px;
+    text-align:center;
+    font-weight:bolder;
+    background-image:url(../Images/Home/admin_menu_t.gif);
+    background-repeat:no-repeat;
+}
+.treeBody {
+    border-left:1px solid #0C9EE1;
+    border-right:1px solid #0C9EE1;
+    width:181px;
+    height:256px;
+    padding-left:10px;
+    background-image:url(../Images/Home/admin_menu_b.gif);
+    background-repeat:repeat-x;
+}
+.right {
+    width:800px;
+    margin-left:200px;
+}
+.treeMain {
+    height:24px;
+    line-height:24px;
+}
+.treeDl {
+    margin-left:15px;
+}
+.treeDl ul {
+    margin-left:15px;
+}
+.treeDl li {
+list-style:none;
+}
+.treeBody a {
+  text-decoration:none;
+  color:#000000;
+}
+.treeBody a:hover {
+  text-decoration:underline;
+  color:#59b1d9;
+}
+.img1:hover {
+    cursor:pointer;
+}

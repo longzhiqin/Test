@@ -1,0 +1,34 @@
+﻿.main {
+    width:100%;
+}
+.top {
+    height:50px;
+    line-height:50px;
+    font-weight:bolder;
+    margin-left:10px;
+}
+.top a {    
+    color:#000000;
+}
+.operation {
+    margin-left:30px;
+}
+.page {
+    margin-left:30px;
+    text-align:right;
+    height:20px;
+    line-height:20px;
+}
+.mytb {
+    margin-left:30px;
+    margin-bottom:6px;
+}
+.mytb td,th {
+    border:1px solid #BFD0FF;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
+.footer {
+    text-align:right;
+}

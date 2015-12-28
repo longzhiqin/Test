@@ -1,0 +1,50 @@
+﻿@using BooksShop.Models
+@model List<Users>
+
+@{
+    ViewBag.Title = "状态管理";
+    Layout = "~/Views/Home/ManageMaster.cshtml";
+    <link href="~/CSS/StateManage.css" rel="stylesheet" />
+    <script src="~/JS/jquery-1.8.0.min.js"></script>
+    <script src="~/JS/StateManage.js"></script>
+}
+
+<div class="main">
+    <div class="top">您现在的位置：<a href="#"> 第三波</a> ><a href="#"> 管理员后台 </a>><a href="#"> 用户管理</a> > 状态管理 </div>
+    <div class="operation">
+        <input type="button" value="启用用户" onclick="QiYong();" />
+        <input type="button" value="禁用用户" onclick="JinYong();" />
+    </div>
+    <div class="page">
+        第<span id="index"> @ViewBag.index</span> 页，共<span id="tolPage"> @ViewBag.TolPage</span> 页（共计 @ViewBag.TolRecord 笔）
+</div>
+    <div class="mytb">
+        <table cellpadding="0" cellspacing="0" style="width:100%;">
+            <tr>
+                <th style="width:40px;">@Html.CheckBox("ckb_Limits")</th>
+                <th style="width:120px;">用户名</th>
+                <th style="width:120px;">姓名</th>
+                <th style="width:200px;">电子邮件</th>
+                <th style="width:200px;">地址</th>
+                <th>用户状态</th>
+            </tr>
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td style="width:40px;">@Html.CheckBox("ckb_Limits", new { id = "ckb_Limits" + i.ToString() })</td>
+                    <td class="LoginId" style="width:120px;">@Model[i].LoginId</td>
+                    <td style="width:120px;">@Model[i].Name</td>
+                    <td style="width:200px;">@Model[i].Mail</td>
+                    <td style="width:200px;">@Model[i].Address</td>
+                    <td class="state">@Model[i].UserStateId</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="footer">
+        <input type="button" value="首页" onclick="FirstPage();" />
+        <input type="button" value="上一页" onclick="PageUp();" />
+        <input type="button" value="下一页" onclick="PageDown();" />
+        <input type="button" value="尾页" onclick="LastPage();" />
+    </div>
+</div>

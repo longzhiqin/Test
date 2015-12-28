@@ -1,0 +1,26 @@
+﻿.main {
+    width:96%;
+}
+.top {
+    height:50px;
+    line-height:50px;
+    font-weight:bolder;
+    margin-left:10px;
+}
+.top a {    
+    color:#000000;
+}
+#mytb {
+    margin-left:30px;
+    margin-bottom:6px;
+}
+#mytb td {
+    border:1px solid #0F9FDE;
+    height:30px;
+    line-height:30px;
+}
+.td1 {
+   text-align:right;
+   font-weight:bold;
+   width:80px;
+}

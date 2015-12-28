@@ -1,0 +1,50 @@
+﻿.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+}
+
+.login_t {
+    margin: 0 auto;
+    width: 598px;
+    height: 78px;
+    background: url(../Images/Login/login_03.gif) no-repeat;
+}
+
+.login_m {
+    margin: 0 auto;
+    width: 598px;
+    height: 142px;
+    background: url(../Images/Login/login_05.gif) no-repeat;
+}
+
+.login_b {
+    margin: 0 auto;
+    width: 598px;
+    height: 150px;
+    padding-top: 24px;
+    background: url(../Images/Login/login_06.gif) no-repeat;
+    text-align: center;
+}
+
+.login_b p {
+    margin: 12px 0;
+}
+
+#txtUserName,#txtUserPwd {
+    width: 160px;
+    height: 20px;
+    margin-left: 6px;
+    line-height: 20px;
+    border: 1px solid #999;
+}
+
+.login_sub {
+    width: 67px;
+    height: 19px;
+    background: url(../Images/Login/login_sub.gif) no-repeat;
+    text-align: center;
+    border: none;
+    line-height: 22px;
+}
